@@ -1,47 +1,53 @@
+import { Component } from "react";
 import Page from '../components/main';
 
-export default () => (
-	<html>
-		<head>
-			<title>Paystubs</title>
-		</head>
-		<body>
-			<Page>
-				<h1>Employee</h1>
-				<form className="employee-form">
-					<label>First Name:
+export default class extends Component {
+	render() {
+		return (
+			<html>
+				<head>
+					<title>Paystubs</title>
+				</head>
+				<body>
+					<Page>
+						<h1>Employee</h1>
+						<form className="employee-form">
+							<label>First Name:
 					<input type="text" />
-					</label>
+							</label>
 
-					<br />
+							<br />
 
-					<label>Last Name:
+							<label>Last Name:
 					<input type="text" />
-					</label>
+							</label>
 
-					<br />
+							<br />
 
-					<label>Annual Salary (natural numbers):
+							<label>Annual Salary (natural numbers):
 					<input type="text" />
-					</label>
+							</label>
 
-					<br />
+							<br />
 
-					<label>Super Rate (0% - 12% inclusive):
+							<label>Super Rate (0% - 12% inclusive):
 					<input type="text" />
-					</label>
+							</label>
 
-					<br />
+							<br />
 
-					<label>Pay Period Start Date (e.g. 01 - March):
+							<label>Pay Period Start Date (e.g. 01 - March):
 					<input type="text" />
-					</label>
+							</label>
 
-					<br />
+							<br />
 
-					<button>Enter</button>
-				</form>
-			</Page>
-		</body>
-	</html>
-);
+							<button>Enter</button>
+						</form>
+					</Page>
+				</body>
+			</html>
+		);
+
+	}
+}
