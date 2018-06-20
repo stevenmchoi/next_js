@@ -1,4 +1,4 @@
-import Page from '../components/employee_form';
+import Page from '../components/main';
 
 export default () => (
 	<Page>

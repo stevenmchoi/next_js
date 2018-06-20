@@ -11,7 +11,7 @@ export default ( { children } ) => (
 		<nav>
 			<Menu href={'/'} label={'Home'} />
 			{
-				[ 'new-employee', 'employees' ].map( m => (
+				[ 'employees' ].map( m => (
 					<Menu
 						key={m}
 						href={`/${m}`}
