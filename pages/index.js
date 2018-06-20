@@ -1,37 +1,41 @@
+import Page from '../components/employee_form';
+
 export default () => (
-	<html>
-		<head>Paystubs</head>
-		<body>
-			<h1>Employee</h1>
-			<form className="employee-form">
-				<label>First Name:
+	<Page>
+		<html>
+			<head>Paystubs</head>
+			<body>
+				<h1>Employee</h1>
+				<form className="employee-form">
+					<label>First Name:
 					<input type="text" />
-				</label>
+					</label>
 
-				<br />
+					<br />
 
-				<label>Last Name:
+					<label>Last Name:
 					<input type="text" />
-				</label>
+					</label>
 
-				<br />
+					<br />
 
-				<label>Annual Salary (natural numbers):
+					<label>Annual Salary (natural numbers):
 					<input type="text" />
-				</label>
+					</label>
 
-				<br />
+					<br />
 
-				<label>Super Rate (0% - 12% inclusive):
+					<label>Super Rate (0% - 12% inclusive):
 					<input type="text" />
-				</label>
+					</label>
 
-				<br />
+					<br />
 
-				<label>Pay Period Start Date (e.g. 01 - March):
+					<label>Pay Period Start Date (e.g. 01 - March):
 					<input type="text" />
-				</label>
-			</form>
-		</body>
-	</html>
+					</label>
+				</form>
+			</body>
+		</html>
+	</Page>
 );

@@ -17,7 +17,7 @@ export default ( { children } ) => (
 						href={`/${m}`}
 						label={m.toUpperCase()}
 					/>
-				) );
+				) )
 			}
 		</nav>
 		<div>
