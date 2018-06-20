@@ -1,10 +1,12 @@
 import Page from '../components/main';
 
 export default () => (
-	<Page>
-		<html>
-			<head>Paystubs</head>
-			<body>
+	<html>
+		<head>
+			<title>Paystubs</title>
+		</head>
+		<body>
+			<Page>
 				<h1>Employee</h1>
 				<form className="employee-form">
 					<label>First Name:
@@ -34,8 +36,12 @@ export default () => (
 					<label>Pay Period Start Date (e.g. 01 - March):
 					<input type="text" />
 					</label>
+
+					<br />
+
+					<button>Enter</button>
 				</form>
-			</body>
-		</html>
-	</Page>
+			</Page>
+		</body>
+	</html>
 );
