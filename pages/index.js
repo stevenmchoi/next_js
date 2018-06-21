@@ -2,9 +2,16 @@ import { Component } from "react";
 import Page from '../components/main';
 import EmployeeForm from './employee_form';
 
-import { ThemeContext, employee_themes } from '../components/theme_context'
+import { EmployeeContext, employees } from '../components/employee_context'
 
 export default class extends Component {
+	constructor( props ) {
+		super( props );
+		this.state = {
+			employees
+		}
+	}
+
 	render() {
 		return (
 			<html>
@@ -13,7 +20,9 @@ export default class extends Component {
 				</head>
 				<body>
 					<Page>
-						<EmployeeForm />
+						<EmployeeContext.Provider value={this.state.employees}>
+							<EmployeeForm />
+						</EmployeeContext.Provider>
 					</Page>
 				</body>
 			</html>

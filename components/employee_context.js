@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export const employee_themes = {
+export const employees = {
 	a_smith: {
 		employeeName: "Andrew Smith",
 		payPeriod: "01 March - 31 March",
@@ -19,6 +19,6 @@ export const employee_themes = {
 	}
 };
 
-export const ThemeContext = createContext(
-	employee_themes
+export const EmployeeContext = createContext(
+	employees
 );
