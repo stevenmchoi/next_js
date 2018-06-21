@@ -25,8 +25,8 @@ export default () => (
 
 				return (
 					<div className="page">
-						<table className="employee-table">
-							<thead>
+						<table className="table table-striped">
+							<thead className="thead-dark">
 								<tr>
 									<th scope="col">Employee Name</th>
 									<th scope="col">Pay Period</th>
