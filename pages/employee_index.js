@@ -6,8 +6,19 @@ export default () => (
 			console.log( employees );
 
 			return (
-				<div>
-					{/* <p>{employees}</p> */}
+				<div className="page">
+					<table className="employee-table">
+						<thead>
+							<tr>
+								<th scope="col">Employee Name</th>
+								<th scope="col">Pay Period</th>
+								<th scope="col">Gross Income</th>
+								<th scope="col">Income Tax</th>
+								<th scope="col">Net Income</th>
+								<th scope="col">Super Amount</th>
+							</tr>
+						</thead>
+					</table>
 				</div>
 			);
 		}}

@@ -1,5 +1,5 @@
 export default () => (
-	<div>
+	<div className="page">
 		<h1>Employee</h1>
 		<form className="employee-form">
 			<label>First Name:

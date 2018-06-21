@@ -64,7 +64,7 @@ export default ( { children } ) => (
 			div {
 				width: 100%;
 				color: #333;
-				padding-top: 30px;
+				padding-top: 100px;
 			};
 		`}</style>
 	</main>
