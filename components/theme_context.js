@@ -1,3 +1,5 @@
+import { createContext } from 'react';
+
 export const employee_themes = {
 	a_smith: {
 		employeeName: "Andrew Smith",
@@ -16,3 +18,7 @@ export const employee_themes = {
 		superAmount: 1000
 	}
 };
+
+export const ThemeContext = createContext(
+	employee_themes
+);
