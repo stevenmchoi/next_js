@@ -5,7 +5,23 @@ export default () => (
 	<Page>
 		<EmployeeContext.Consumer>
 			{( employees ) => {
-				console.log( employees );
+				let employeeRows = employees.map( ( {
+					employeeName,
+					payPeriod,
+					grossIncome,
+					incomeTax,
+					netIncome,
+					superAmount
+				} ) => (
+						<tr>
+							<th scope="row">{employeeName}</th>
+							<td>{payPeriod}</td>
+							<td>{grossIncome}</td>
+							<td>{incomeTax}</td>
+							<td>{netIncome}</td>
+							<td>{superAmount}</td>
+						</tr>
+					) );
 
 				return (
 					<div className="page">
@@ -20,6 +36,9 @@ export default () => (
 									<th scope="col">Super Amount</th>
 								</tr>
 							</thead>
+							<tbody>
+								{employeeRows}
+							</tbody>
 						</table>
 					</div>
 				);
