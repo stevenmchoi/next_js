@@ -22,15 +22,8 @@ export default ( { children } ) => (
 	<main>
 		<nav>
 			<Menu href={'/'} label={'Home'} />
-			{
-				[ 'employees' ].map( m => (
-					<Menu
-						key={m}
-						href={`/${m}`}
-						label={m.toUpperCase()}
-					/>
-				) )
-			}
+			<Menu key='employees' href={'/employees'} label={'Employees'} />
+			<Menu key='about' href={'/about'} label={'About'} />
 		</nav>
 
 		<div>
@@ -64,7 +57,7 @@ export default ( { children } ) => (
 			div {
 				width: 100%;
 				color: #333;
-				padding-top: 100px;
+				padding-top: 50px;
 			};
 		`}</style>
 	</main>

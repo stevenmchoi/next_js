@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Page from '../components/main';
 import EmployeeForm from './employee_form';
-import EmployeeIndex from './employee_index'
+import EmployeeIndex from './employees'
 
 import { EmployeeContext, employees } from '../components/employee_context'
 
@@ -26,8 +26,8 @@ export default class extends Component {
 				<body>
 					<Page>
 						<EmployeeContext.Provider value={this.state.employees}>
-							{/* <EmployeeForm /> */}
-							<EmployeeIndex />
+							<EmployeeForm />
+							{/* <EmployeeIndex /> */}
 						</EmployeeContext.Provider>
 					</Page>
 
