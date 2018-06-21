@@ -30,13 +30,11 @@ export default ( { children } ) => (
 		<body>
 			<main>
 				<nav>
-					<Menu href={'/'} label={'Home'} />
+					<Menu href={'/'} label={'New Employee'} />
 					<Menu key='employees' href={'/employees'} label={'Employees'} />
 				</nav>
 
-				<div>
-					{children}
-				</div>
+				{children}
 
 				<style global jsx>{`
 					body {
@@ -59,15 +57,13 @@ export default ( { children } ) => (
 						color: #0e0e0e;
 						text-decoration: none;
 					};
-				`}</style>
 
-				<style jsx>{`
-			div {
-				width: 100%;
-				color: #333;
-				padding-top: 50px;
-			};
-		`}</style>
+					.page {
+						width: 100%;
+						color: #333;
+						padding-top: 45px;
+					};
+				`}</style>
 			</main>
 
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossOrigin="anonymous"></script>
