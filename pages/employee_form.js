@@ -31,62 +31,57 @@ class EmployeeForm extends Component {
 			<EmployeeContext.Consumer>
 				{( employees ) => (
 					<div className="page">
-						<h1>Employee</h1>
 						<form className="employee-form" onSubmit={this.handleSubmit}>
-							<label>First Name:
+							<h1>Employee</h1>
+							<div className="form-group row">
+								<label className="col-sm-5 col-form-label">First Name:</label>
 								<input
 									type="text"
 									name="firstName"
 									value={this.state.firstName}
 									onChange={this.handleChange}
 								/>
-							</label>
+							</div>
 
-							<br />
-
-							<label>Last Name:
+							<div className="form-group row">
+								<label className="col-sm-5 col-form-label">Last Name:</label>
 								<input
 									type="text"
 									name="lastName"
 									value={this.state.lastName}
 									onChange={this.handleChange}
 								/>
-							</label>
+							</div>
 
-							<br />
-
-							<label>Annual Salary (natural numbers):
+							<div className="form-group row">
+								<label className="col-sm-5 col-form-label">Annual Salary (natural numbers):</label>
 								<input
 									type="text"
 									name="annualSalary"
 									value={this.state.annualSalary}
 									onChange={this.handleChange}
 								/>
-							</label>
+							</div>
 
-							<br />
-
-							<label>Super Rate (0% - 12% inclusive):
+							<div className="form-group row">
+								<label className="col-sm-5 col-form-label">Super Rate (0% - 12% inclusive):</label>
 								<input
 									type="text"
 									name="superRate"
 									value={this.state.superRate}
 									onChange={this.handleChange}
 								/>
-							</label>
+							</div>
 
-							<br />
-
-							<label>Pay Period Start Date (e.g. 01 - March):
+							<div className="form-group row">
+								<label className="col-sm-5 col-form-label">Pay Period Start Date (e.g. 01 - March):</label>
 								<input
 									type="date"
 									name="payPeriodStartDate"
 									value={this.state.payPeriodStartDate}
 									onChange={this.handleChange}
 								/>
-							</label>
-
-							<br />
+							</div>
 
 							<button>Enter</button>
 						</form>
