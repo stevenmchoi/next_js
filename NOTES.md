@@ -8,3 +8,4 @@
 * Learning React Context API
   * Passing down global employees' data to Employees page
   * Updating employees' from 'New Employee' form
+  * Where to place the Providers and organize how to pass the data

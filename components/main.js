@@ -10,12 +10,15 @@ export default class extends Component {
 		this.state = {
 			employees,
 			addEmployee: ( newEmployee ) => {
-				console.log( newEmployee );
 				const newEmployeeData = calcNewEmployeeData( newEmployee );
+				console.log( newEmployeeData );
 
 				this.setState( {
 					employees: [ ...this.state.employees, newEmployeeData ]
 				} );
+
+				console.log( this.state.employees );
+
 			}
 		}
 	}
