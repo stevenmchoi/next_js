@@ -4,7 +4,7 @@ import Page from "../components/main";
 export default () => (
 	<Page>
 		<EmployeeContext.Consumer>
-			{( employees ) => {
+			{( { employees } ) => {
 				let employeeRows = employees.map( ( {
 					employeeName,
 					payPeriod,
