@@ -1,38 +1,44 @@
+import { EmployeeContext } from '../components/employee_context'
+
 export default () => (
-	<div className="page">
-		<h1>Employee</h1>
-		<form className="employee-form">
-			<label>First Name:
+	<EmployeeContext.Consumer>
+		{( employees ) => (
+			<div className="page">
+				<h1>Employee</h1>
+				<form className="employee-form">
+					<label>First Name:
 				<input type="text" />
-			</label>
+					</label>
 
-			<br />
+					<br />
 
-			<label>Last Name:
+					<label>Last Name:
 				<input type="text" />
-			</label>
+					</label>
 
-			<br />
+					<br />
 
-			<label>Annual Salary (natural numbers):
+					<label>Annual Salary (natural numbers):
 				<input type="text" />
-			</label>
+					</label>
 
-			<br />
+					<br />
 
-			<label>Super Rate (0% - 12% inclusive):
+					<label>Super Rate (0% - 12% inclusive):
 				<input type="text" />
-			</label>
+					</label>
 
-			<br />
+					<br />
 
-			<label>Pay Period Start Date (e.g. 01 - March):
+					<label>Pay Period Start Date (e.g. 01 - March):
 				<input type="text" />
-			</label>
+					</label>
 
-			<br />
+					<br />
 
-			<button>Enter</button>
-		</form>
-	</div>
+					<button>Enter</button>
+				</form>
+			</div>
+		)}
+	</EmployeeContext.Consumer>
 );
