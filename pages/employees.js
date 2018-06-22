@@ -13,7 +13,7 @@ export default () => (
 					netIncome,
 					superAmount
 				} ) => (
-						<tr>
+						<tr key={employeeName}>
 							<th scope="row">{employeeName}</th>
 							<td>{payPeriod}</td>
 							<td>{grossIncome}</td>
@@ -27,7 +27,7 @@ export default () => (
 					<div className="page">
 						<table className="table table-striped">
 							<thead className="thead-dark">
-								<tr>
+								<tr key="header-row">
 									<th scope="col">Employee Name</th>
 									<th scope="col">Pay Period</th>
 									<th scope="col">Gross Income</th>
