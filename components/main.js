@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Menu from "./menu";
+import calcNewEmployeeData from "../util/employee_data";
 
 import { EmployeeContext, employees } from '../components/employee_context'
 
@@ -10,9 +11,10 @@ export default class extends Component {
 			employees,
 			addEmployee: ( newEmployee ) => {
 				console.log( newEmployee );
+				const newEmployeeData = calcNewEmployeeData( newEmployee );
 
 				this.setState( {
-					employees: [ ...this.state.employees, newEmployee ]
+					employees: [ ...this.state.employees, newEmployeeData ]
 				} );
 			}
 		}
