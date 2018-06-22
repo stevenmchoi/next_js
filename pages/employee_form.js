@@ -35,55 +35,79 @@ class EmployeeForm extends Component {
 							<h1>Employee</h1>
 							<div className="form-group row">
 								<label className="col-sm-5 col-form-label">First Name:</label>
-								<input
-									type="text"
-									name="firstName"
-									value={this.state.firstName}
-									onChange={this.handleChange}
-								/>
+								<div className="col-sm-4">
+									<input
+										type="text"
+										name="firstName"
+										className="form-control"
+										value={this.state.firstName}
+										onChange={this.handleChange}
+										placeholder="First Name"
+									/>
+								</div>
 							</div>
 
 							<div className="form-group row">
 								<label className="col-sm-5 col-form-label">Last Name:</label>
-								<input
-									type="text"
-									name="lastName"
-									value={this.state.lastName}
-									onChange={this.handleChange}
-								/>
+								<div className="col-sm-4">
+									<input
+										type="text"
+										name="lastName"
+										className="form-control"
+										value={this.state.lastName}
+										onChange={this.handleChange}
+										placeholder="Last Name"
+									/>
+								</div>
 							</div>
 
 							<div className="form-group row">
 								<label className="col-sm-5 col-form-label">Annual Salary (natural numbers):</label>
-								<input
-									type="text"
-									name="annualSalary"
-									value={this.state.annualSalary}
-									onChange={this.handleChange}
-								/>
+								<div className="col-sm-4">
+									<input
+										type="text"
+										name="annualSalary"
+										className="form-control"
+										value={this.state.annualSalary}
+										onChange={this.handleChange}
+										placeholder="e.g. 50000"
+									/>
+								</div>
 							</div>
 
 							<div className="form-group row">
 								<label className="col-sm-5 col-form-label">Super Rate (0% - 12% inclusive):</label>
-								<input
-									type="text"
-									name="superRate"
-									value={this.state.superRate}
-									onChange={this.handleChange}
-								/>
+								<div className="col-sm-4">
+									<input
+										type="text"
+										name="superRate"
+										className="form-control"
+										value={this.state.superRate}
+										onChange={this.handleChange}
+										placeholder="e.g. 10%"
+									/>
+								</div>
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">Pay Period Start Date (e.g. 01 - March):</label>
-								<input
-									type="date"
-									name="payPeriodStartDate"
-									value={this.state.payPeriodStartDate}
-									onChange={this.handleChange}
-								/>
+								<label className="col-sm-5 col-form-label">Pay Period Start Date:</label>
+								<div className="col-sm-4">
+									<input
+										type="text"
+										name="payPeriodStartDate"
+										className="form-control"
+										value={this.state.payPeriodStartDate}
+										onChange={this.handleChange}
+										placeholder="e.g. 01 - March"
+									/>
+								</div>
 							</div>
 
-							<button>Enter</button>
+							<div class="form-group row">
+								<div class="col-sm-10">
+									<button class="btn btn-primary">Enter</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				)}
