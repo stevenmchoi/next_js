@@ -27,9 +27,11 @@ export default class extends Component {
 		this.state = {
 			employees,
 			addEmployee: ( newEmployee ) => {
+				console.log( newEmployee );
+
 				this.setState( {
 					employees: this.state.employees.push( newEmployee )
-				} )
+				} );
 			}
 		}
 	}

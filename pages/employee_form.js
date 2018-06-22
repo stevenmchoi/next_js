@@ -5,14 +5,11 @@ class EmployeeForm extends Component {
 	constructor( props ) {
 		super( props );
 		this.state = {
-			employees: this.props.employees,
-			newEmployeeBaseData: {
-				firstName: "",
-				lastName: "",
-				annualSalary: "",
-				superRate: "",
-				payPeriodStartDate: ""
-			}
+			firstName: "",
+			lastName: "",
+			annualSalary: "",
+			superRate: "",
+			payPeriodStartDate: ""
 		}
 
 		this.handleChange = this.handleChange.bind( this );
@@ -21,22 +18,31 @@ class EmployeeForm extends Component {
 
 	handleChange( event ) {
 		this.setState( {
-			newEmployeeBaseData: {
-				[ event.target.name ]: event.target.value
-			}
+			[ event.target.name ]: event.target.value
 		} );
 	}
 
-	handleSubmit( event ) {
+	handleSubmit( event, addEmployee ) {
 		event.preventDefault();
+		addEmployee( this.state );
+		this.setState( {
+			firstName: "",
+			lastName: "",
+			annualSalary: "",
+			superRate: "",
+			payPeriodStartDate: ""
+		} );
 	}
 
 	render() {
 		return (
 			<EmployeeContext.Consumer>
-				{( context ) => (
+				{( { addEmployee } ) => (
 					<div className="page employee-form">
-						<form className="container" onSubmit={this.handleSubmit}>
+						<form
+							className="container"
+							onSubmit={( event ) => ( this.handleSubmit( event, addEmployee ) )}
+						>
 							<h1>New Employee</h1>
 							<div className="form-group row">
 								<label className="col-sm-6 col-form-label">First Name:</label>
@@ -45,7 +51,7 @@ class EmployeeForm extends Component {
 										type="text"
 										name="firstName"
 										className="form-control"
-										value={this.state.newEmployeeBaseData.firstName}
+										value={this.state.firstName}
 										onChange={this.handleChange}
 										placeholder="First Name"
 									/>
@@ -59,7 +65,7 @@ class EmployeeForm extends Component {
 										type="text"
 										name="lastName"
 										className="form-control"
-										value={this.state.newEmployeeBaseData.lastName}
+										value={this.state.lastName}
 										onChange={this.handleChange}
 										placeholder="Last Name"
 									/>
@@ -73,7 +79,7 @@ class EmployeeForm extends Component {
 										type="text"
 										name="annualSalary"
 										className="form-control"
-										value={this.state.newEmployeeBaseData.annualSalary}
+										value={this.state.annualSalary}
 										onChange={this.handleChange}
 										placeholder="e.g. 50000"
 									/>
@@ -87,7 +93,7 @@ class EmployeeForm extends Component {
 										type="text"
 										name="superRate"
 										className="form-control"
-										value={this.state.newEmployeeBaseData.superRate}
+										value={this.state.superRate}
 										onChange={this.handleChange}
 										placeholder="e.g. 10%"
 									/>
@@ -101,7 +107,7 @@ class EmployeeForm extends Component {
 										type="text"
 										name="payPeriodStartDate"
 										className="form-control"
-										value={this.state.newEmployeeBaseData.payPeriodStartDate}
+										value={this.state.payPeriodStartDate}
 										onChange={this.handleChange}
 										placeholder="e.g. 01 - March"
 									/>
