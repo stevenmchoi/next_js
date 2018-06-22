@@ -30,12 +30,12 @@ class EmployeeForm extends Component {
 		return (
 			<EmployeeContext.Consumer>
 				{( employees ) => (
-					<div className="page">
-						<form className="employee-form" onSubmit={this.handleSubmit}>
-							<h1>Employee</h1>
+					<div className="page employee-form">
+						<form className="container" onSubmit={this.handleSubmit}>
+							<h1>New Employee</h1>
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">First Name:</label>
-								<div className="col-sm-4">
+								<label className="col-sm-6 col-form-label">First Name:</label>
+								<div>
 									<input
 										type="text"
 										name="firstName"
@@ -48,8 +48,8 @@ class EmployeeForm extends Component {
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">Last Name:</label>
-								<div className="col-sm-4">
+								<label className="col-sm-6 col-form-label">Last Name:</label>
+								<div>
 									<input
 										type="text"
 										name="lastName"
@@ -62,8 +62,8 @@ class EmployeeForm extends Component {
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">Annual Salary (natural numbers):</label>
-								<div className="col-sm-4">
+								<label className="col-sm-6 col-form-label">Annual Salary (natural numbers):</label>
+								<div>
 									<input
 										type="text"
 										name="annualSalary"
@@ -76,8 +76,8 @@ class EmployeeForm extends Component {
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">Super Rate (0% - 12% inclusive):</label>
-								<div className="col-sm-4">
+								<label className="col-sm-6 col-form-label">Super Rate (0% - 12% inclusive):</label>
+								<div>
 									<input
 										type="text"
 										name="superRate"
@@ -90,8 +90,8 @@ class EmployeeForm extends Component {
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-5 col-form-label">Pay Period Start Date:</label>
-								<div className="col-sm-4">
+								<label className="col-sm-6 col-form-label">Pay Period Start Date:</label>
+								<div>
 									<input
 										type="text"
 										name="payPeriodStartDate"

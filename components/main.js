@@ -61,7 +61,16 @@ export default ( { children } ) => (
 					.page {
 						width: 100%;
 						color: #333;
-						padding-top: 45px;
+						margin-top: 45px;
+					};
+
+					.employee-form {
+						width: 600px;
+						margin: 60px 15px;
+						padding: 15px 15px;
+						box-shadow: 0 0 2px gray;
+						border-radius: 10px;
+						box-sizing: border-box;
 					};
 				`}</style>
 			</main>
