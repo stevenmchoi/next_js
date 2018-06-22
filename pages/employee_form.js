@@ -103,9 +103,9 @@ class EmployeeForm extends Component {
 								</div>
 							</div>
 
-							<div class="form-group row">
-								<div class="col-sm-10">
-									<button class="btn btn-primary">Enter</button>
+							<div className="form-group row">
+								<div className="col-sm-10">
+									<button className="btn btn-primary">Enter</button>
 								</div>
 							</div>
 						</form>
