@@ -5,6 +5,8 @@ export default ( newEmployee ) => {
 	const payPeriod = '01 March - 31 March'; // Adjust for dates
 	const grossIncome = Math.floor( parseInt( newEmployee.annualSalary ) / 12 );
 	const incomeTax = incomeTaxCalc( newEmployee.annualSalary );
+	const netIncome = grossIncome - incomeTax;
+	const superAmount = Math.floor( grossIncome * newEmployee.superRate * .01 );
 
 	return {
 		employeeName,
