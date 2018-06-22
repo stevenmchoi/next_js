@@ -30,7 +30,7 @@ export default class extends Component {
 				console.log( newEmployee );
 
 				this.setState( {
-					employees: this.state.employees.push( newEmployee )
+					employees: [ ...this.state.employees, newEmployee ]
 				} );
 			}
 		}
