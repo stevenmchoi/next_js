@@ -22,9 +22,6 @@ export const employees = [
 
 function addEmployee( newEmployee ) {
 	const newEmployeeData = calcNewEmployeeData( newEmployee );
-	console.log( newEmployeeData );
-
-	console.log( "New array:" );
 
 	employees.push( newEmployeeData );
 }
