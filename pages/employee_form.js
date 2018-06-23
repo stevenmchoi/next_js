@@ -26,12 +26,14 @@ class EmployeeForm extends Component {
 		event.preventDefault();
 
 		if (
-			this.state.firstName !== "" ||
-			this.state.lastName !== "" ||
-			this.state.annualSalary !== "" ||
-			this.state.superRate !== "" ||
-			this.state.payPeriodStartDate !== ""
+			this.state.firstName === "" ||
+			this.state.lastName === "" ||
+			this.state.annualSalary === "" ||
+			this.state.superRate === "" ||
+			this.state.payPeriodStartDate === ""
 		) {
+			console.log( "Error msg: fill in all fields!" )
+		} else {
 			addEmployee( this.state );
 
 			// Reset input fields
@@ -42,8 +44,6 @@ class EmployeeForm extends Component {
 				superRate: "",
 				payPeriodStartDate: ""
 			} );
-		} else {
-			console.log( "Error msg: fill in all fields!" )
 		}
 	}
 
