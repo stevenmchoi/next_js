@@ -3,14 +3,6 @@ import { EmployeeContext } from "../components/employee_context";
 import Page from "../components/page";
 
 class EmployeesTable extends Component {
-	constructor( props ) {
-		super( props );
-	}
-
-	componentDidMount() {
-		window.b = EmployeeContext;
-	}
-
 	render() {
 		return (
 			<div className="page">
