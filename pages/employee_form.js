@@ -4,12 +4,22 @@ import { EmployeeContext } from '../components/employee_context'
 class EmployeeForm extends Component {
 	constructor( props ) {
 		super( props );
+
+		let now = new Date();
+		let month = now.getUTCMonth() + 1;
+
+		if ( month < 10 ) {
+			month = "0" + month;
+		}
+
+		let year = now.getUTCFullYear();
+
 		this.state = {
 			firstName: "",
 			lastName: "",
 			annualSalary: "",
 			superRate: "",
-			payPeriodStartDate: ""
+			payPeriodStartDate: `${year}-${month}`
 		}
 
 		this.handleChange = this.handleChange.bind( this );
