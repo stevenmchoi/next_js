@@ -2,26 +2,38 @@ import { Component } from "react";
 import Menu from "./menu";
 import calcNewEmployeeData from "../util/employee_data";
 
-import { EmployeeContext, employees } from '../components/employee_context'
+// import { EmployeeContext, employees } from '../components/employee_context'
 
 export default class extends Component {
 	constructor( props ) {
 		super( props );
-		this.state = {
-			employees,
-			addEmployee: ( newEmployee ) => {
-				const newEmployeeData = calcNewEmployeeData( newEmployee );
-				console.log( newEmployeeData );
+		// console.log( "page.js", employees );
 
-				this.setState( {
-					employees: [ ...this.state.employees, newEmployeeData ]
-				} );
+		// this.state = {
+		// 	employees,
+		// };
 
-				console.log( this.state.employees );
-
-			}
-		}
+		// this.addEmployee = this.addEmployee.bind( this );
 	}
+
+	// componentDidMount() {
+	// 	window.a = EmployeeContext;
+	// }
+
+	// addEmployee( newEmployee ) {
+	// 	const newEmployeeData = calcNewEmployeeData( newEmployee );
+	// 	console.log( newEmployeeData );
+
+	// 	console.log( "New array:" );
+
+	// 	console.log( [ ...this.state.employees, newEmployeeData ] );
+
+	// 	this.setState( {
+	// 		employees: [ ...this.state.employees, newEmployeeData ]
+	// 	}, () => {
+	// 		console.log( 'state:', this.state );
+	// 	} );
+	// }
 
 	render() {
 		return (
@@ -40,9 +52,10 @@ export default class extends Component {
 							<Menu key='employees' href={'/employees'} label={'Employees'} />
 						</nav>
 
-						<EmployeeContext.Provider value={this.state}>
-							{this.props.children}
-						</EmployeeContext.Provider>
+						{/* <EmployeeContext.Provider value={{ employeeData: this.state.employees, addEmployee: this.addEmployee }} > */}
+						{/* <EmployeeContext.Provider> */}
+						{this.props.children}
+						{/* </EmployeeContext.Provider> */}
 
 						<style global jsx>{`
 							body {
@@ -87,7 +100,7 @@ export default class extends Component {
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossOrigin="anonymous"></script>
 					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossOrigin="anonymous"></script>
 				</body>
-			</html>
+			</html >
 		);
 	}
 }

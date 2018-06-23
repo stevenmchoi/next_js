@@ -1,4 +1,5 @@
 import { createContext } from 'react';
+import calcNewEmployeeData from "../util/employee_data";
 
 export const employees = [
 	{
@@ -19,6 +20,36 @@ export const employees = [
 	}
 ];
 
-export const EmployeeContext = createContext(
-	employees
-);
+function addEmployee( newEmployee ) {
+	const newEmployeeData = calcNewEmployeeData( newEmployee );
+	console.log( newEmployeeData );
+
+	console.log( "New array:" );
+
+	employee.push( newEmployeeData );
+}
+
+export const employeeRows = () => employees.map(
+	( {
+		employeeName,
+		payPeriod,
+		grossIncome,
+		incomeTax,
+		netIncome,
+		superAmount
+	} ) => (
+			<tr key={employeeName}>
+				<th scope="row">{employeeName}</th>
+				<td>{payPeriod}</td>
+				<td>{grossIncome}</td>
+				<td>{incomeTax}</td>
+				<td>{netIncome}</td>
+				<td>{superAmount}</td>
+			</tr>
+		) );
+
+export const EmployeeContext = createContext( {
+	employees,
+	addEmployee,
+	employeeRows
+} );
