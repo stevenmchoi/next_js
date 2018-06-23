@@ -24,16 +24,27 @@ class EmployeeForm extends Component {
 
 	handleSubmit( event, addEmployee ) {
 		event.preventDefault();
-		addEmployee( this.state );
 
-		// Reset input fields
-		this.setState( {
-			firstName: "",
-			lastName: "",
-			annualSalary: "",
-			superRate: "",
-			payPeriodStartDate: ""
-		} );
+		if (
+			this.state.firstName !== "" ||
+			this.state.lastName !== "" ||
+			this.state.annualSalary !== "" ||
+			this.state.superRate !== "" ||
+			this.state.payPeriodStartDate !== ""
+		) {
+			addEmployee( this.state );
+
+			// Reset input fields
+			this.setState( {
+				firstName: "",
+				lastName: "",
+				annualSalary: "",
+				superRate: "",
+				payPeriodStartDate: ""
+			} );
+		} else {
+			console.log( "Error msg: fill in all fields!" )
+		}
 	}
 
 	render() {
