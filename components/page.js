@@ -2,39 +2,7 @@ import { Component } from "react";
 import Menu from "./menu";
 import calcNewEmployeeData from "../util/employee_data";
 
-// import { EmployeeContext, employees } from '../components/employee_context'
-
 export default class extends Component {
-	constructor( props ) {
-		super( props );
-		// console.log( "page.js", employees );
-
-		// this.state = {
-		// 	employees,
-		// };
-
-		// this.addEmployee = this.addEmployee.bind( this );
-	}
-
-	// componentDidMount() {
-	// 	window.a = EmployeeContext;
-	// }
-
-	// addEmployee( newEmployee ) {
-	// 	const newEmployeeData = calcNewEmployeeData( newEmployee );
-	// 	console.log( newEmployeeData );
-
-	// 	console.log( "New array:" );
-
-	// 	console.log( [ ...this.state.employees, newEmployeeData ] );
-
-	// 	this.setState( {
-	// 		employees: [ ...this.state.employees, newEmployeeData ]
-	// 	}, () => {
-	// 		console.log( 'state:', this.state );
-	// 	} );
-	// }
-
 	render() {
 		return (
 			<html lang="en">
@@ -52,10 +20,7 @@ export default class extends Component {
 							<Menu key='employees' href={'/employees'} label={'Employees'} />
 						</nav>
 
-						{/* <EmployeeContext.Provider value={{ employeeData: this.state.employees, addEmployee: this.addEmployee }} > */}
-						{/* <EmployeeContext.Provider> */}
 						{this.props.children}
-						{/* </EmployeeContext.Provider> */}
 
 						<style global jsx>{`
 							body {
