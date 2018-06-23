@@ -89,7 +89,7 @@ class EmployeeForm extends Component {
 								<label className="col-sm-6 col-form-label">Annual Salary (natural numbers):</label>
 								<div>
 									<input
-										type="text"
+										type="number"
 										name="annualSalary"
 										className="form-control"
 										value={this.state.annualSalary}
@@ -103,7 +103,7 @@ class EmployeeForm extends Component {
 								<label className="col-sm-6 col-form-label">Super Rate (0% - 12% inclusive):</label>
 								<div>
 									<input
-										type="text"
+										type="number"
 										name="superRate"
 										className="form-control"
 										value={this.state.superRate}
