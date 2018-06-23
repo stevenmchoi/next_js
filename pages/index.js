@@ -1,7 +1,7 @@
 import { Component } from "react";
-import Page from '../components/main';
+import Page from '../components/page';
 import EmployeeForm from './employee_form';
-import EmployeeIndex from './employees'
+import Employees from './employees'
 
 import { EmployeeContext, employees } from '../components/employee_context'
 
