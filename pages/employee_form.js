@@ -116,15 +116,16 @@ class EmployeeForm extends Component {
 							</div>
 
 							<div className="form-group row">
-								<label className="col-sm-6 col-form-label">Pay Period Start Date:</label>
+								<label className="col-sm-6 col-form-label">Pay Period Start Date (month and year):</label>
 								<div>
 									<input
-										type="text"
+										type="month"
 										name="payPeriodStartDate"
 										className="form-control"
 										value={this.state.payPeriodStartDate}
 										onChange={this.handleChange}
-										placeholder="e.g. 01 - March"
+										min="2000-01"
+										max="2020-12"
 									/>
 								</div>
 							</div>
