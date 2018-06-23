@@ -5,6 +5,7 @@
 * Data calculations happen in other files
 * Not enough data to slow down rendering of rows; possible optimization: add
   an HTML row to employeeRows each time
+* For easier computation, pay period always starts and ends for the month
 
 # Challenges
 * Learning React Context API
