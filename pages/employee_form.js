@@ -95,6 +95,7 @@ class EmployeeForm extends Component {
 										value={this.state.annualSalary}
 										onChange={this.handleChange}
 										placeholder="e.g. 50000"
+										min="0"
 									/>
 								</div>
 							</div>
@@ -108,7 +109,8 @@ class EmployeeForm extends Component {
 										className="form-control"
 										value={this.state.superRate}
 										onChange={this.handleChange}
-										placeholder="e.g. 10%"
+										min="0"
+										max="12"
 									/>
 								</div>
 							</div>
