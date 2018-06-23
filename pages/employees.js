@@ -37,11 +37,10 @@ class EmployeesTable extends Component {
 export default props => (
 	<Page>
 		<EmployeeContext.Consumer>
-			{( context ) => {
-				console.log( "employees context:", context );
-
-				return <EmployeesTable employeeRows={context.employeeRows()} />
-			}}
+			{
+				( { employeeRows } ) =>
+					<EmployeesTable employeeRows={employeeRows()} />
+			}
 		</EmployeeContext.Consumer>
 	</Page>
 )

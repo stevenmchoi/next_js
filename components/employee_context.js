@@ -26,7 +26,7 @@ function addEmployee( newEmployee ) {
 
 	console.log( "New array:" );
 
-	employee.push( newEmployeeData );
+	employees.push( newEmployeeData );
 }
 
 export const employeeRows = () => employees.map(

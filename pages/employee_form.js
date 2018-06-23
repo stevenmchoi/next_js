@@ -39,95 +39,91 @@ class EmployeeForm extends Component {
 	render() {
 		return (
 			<EmployeeContext.Consumer>
-				{( context ) => {
-					console.log( "employee_form context:", context );
-
-					return (
-						<div className="page employee-form">
-							<form
-								className="container"
-								onSubmit={( event ) => ( this.handleSubmit( event, context.addEmployee ) )}
-							>
-								<h1>New Employee</h1>
-								<div className="form-group row">
-									<label className="col-sm-6 col-form-label">First Name:</label>
-									<div>
-										<input
-											type="text"
-											name="firstName"
-											className="form-control"
-											value={this.state.firstName}
-											onChange={this.handleChange}
-											placeholder="First Name"
-										/>
-									</div>
+				{( context ) => (
+					<div className="page employee-form">
+						<form
+							className="container"
+							onSubmit={( event ) => ( this.handleSubmit( event, context.addEmployee ) )}
+						>
+							<h1>New Employee</h1>
+							<div className="form-group row">
+								<label className="col-sm-6 col-form-label">First Name:</label>
+								<div>
+									<input
+										type="text"
+										name="firstName"
+										className="form-control"
+										value={this.state.firstName}
+										onChange={this.handleChange}
+										placeholder="First Name"
+									/>
 								</div>
+							</div>
 
-								<div className="form-group row">
-									<label className="col-sm-6 col-form-label">Last Name:</label>
-									<div>
-										<input
-											type="text"
-											name="lastName"
-											className="form-control"
-											value={this.state.lastName}
-											onChange={this.handleChange}
-											placeholder="Last Name"
-										/>
-									</div>
+							<div className="form-group row">
+								<label className="col-sm-6 col-form-label">Last Name:</label>
+								<div>
+									<input
+										type="text"
+										name="lastName"
+										className="form-control"
+										value={this.state.lastName}
+										onChange={this.handleChange}
+										placeholder="Last Name"
+									/>
 								</div>
+							</div>
 
-								<div className="form-group row">
-									<label className="col-sm-6 col-form-label">Annual Salary (natural numbers):</label>
-									<div>
-										<input
-											type="text"
-											name="annualSalary"
-											className="form-control"
-											value={this.state.annualSalary}
-											onChange={this.handleChange}
-											placeholder="e.g. 50000"
-										/>
-									</div>
+							<div className="form-group row">
+								<label className="col-sm-6 col-form-label">Annual Salary (natural numbers):</label>
+								<div>
+									<input
+										type="text"
+										name="annualSalary"
+										className="form-control"
+										value={this.state.annualSalary}
+										onChange={this.handleChange}
+										placeholder="e.g. 50000"
+									/>
 								</div>
+							</div>
 
-								<div className="form-group row">
-									<label className="col-sm-6 col-form-label">Super Rate (0% - 12% inclusive):</label>
-									<div>
-										<input
-											type="text"
-											name="superRate"
-											className="form-control"
-											value={this.state.superRate}
-											onChange={this.handleChange}
-											placeholder="e.g. 10%"
-										/>
-									</div>
+							<div className="form-group row">
+								<label className="col-sm-6 col-form-label">Super Rate (0% - 12% inclusive):</label>
+								<div>
+									<input
+										type="text"
+										name="superRate"
+										className="form-control"
+										value={this.state.superRate}
+										onChange={this.handleChange}
+										placeholder="e.g. 10%"
+									/>
 								</div>
+							</div>
 
-								<div className="form-group row">
-									<label className="col-sm-6 col-form-label">Pay Period Start Date:</label>
-									<div>
-										<input
-											type="text"
-											name="payPeriodStartDate"
-											className="form-control"
-											value={this.state.payPeriodStartDate}
-											onChange={this.handleChange}
-											placeholder="e.g. 01 - March"
-										/>
-									</div>
+							<div className="form-group row">
+								<label className="col-sm-6 col-form-label">Pay Period Start Date:</label>
+								<div>
+									<input
+										type="text"
+										name="payPeriodStartDate"
+										className="form-control"
+										value={this.state.payPeriodStartDate}
+										onChange={this.handleChange}
+										placeholder="e.g. 01 - March"
+									/>
 								</div>
+							</div>
 
-								<div className="form-group row">
-									<div className="col-sm-10">
-										<button className="btn btn-primary">Enter</button>
-									</div>
+							<div className="form-group row">
+								<div className="col-sm-10">
+									<button className="btn btn-primary">Enter</button>
 								</div>
-							</form>
-						</div>
-					)
-				}}
+							</div>
+						</form>
+					</div>
+				)}
 			</EmployeeContext.Consumer>
 		);
 	}
