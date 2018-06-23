@@ -13,3 +13,7 @@
   * Updating employees table from 'New Employee' form; re-rendering properly
   * Where to place the Providers and organize how to pass the data
     * Creating a default value to avoid using a Provider
+
+# Todos
+* Test suite in Jest and Enzyme
+* Error messages and styling for New Employee form
