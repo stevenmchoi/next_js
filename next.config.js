@@ -5,9 +5,7 @@ module.exports = {
 	exportPathMap: function ( defaultPathMap ) {
 		return {
 			'/': { page: '/' },
-			'/employees': { page: '/employees' },
-			'/../docs/README.md': { page: '/readme' },
-			'/../docs/NOTES.md': { page: '/notes' }
+			'/employees': { page: '/employees' }
 		}
 	}
 }
