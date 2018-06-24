@@ -1,4 +1,7 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
+	assetPrefix: isProd ? 'https://stevenmchoi.github.io/next_js' : '',
 	exportPathMap: function ( defaultPathMap ) {
 		return {
 			'/': { page: '/' },
