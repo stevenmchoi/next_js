@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ReactDOM from "react-dom";
 import Page from '../components/page';
 import EmployeeForm from './employee_form';
 import Employees from './employees'
@@ -10,3 +11,14 @@ export default () => (
 		<EmployeeForm />
 	</Page>
 );
+
+document.addEventListener( "DOMContentLoaded", () => {
+	const root = document.getElementById( "root" );
+
+	ReactDOM.render(
+		<Page>
+			<EmployeeForm />
+		</Page>,
+		root
+	);
+} );
