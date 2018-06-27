@@ -23,4 +23,4 @@ NextJS.
 * Super Amount (Gross Income * Super Rate)
 
 ## Assumptions and Challenges
-[marked here]()
+[marked here](https://github.com/stevenmchoi/next_js/blob/master/docs/NOTES.md)
