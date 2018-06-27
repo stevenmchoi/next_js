@@ -1,4 +1,4 @@
-# Employee Paystubs (WIP))
+# Employee Paystubs (WIP)
 [Live Site](https://stevenmchoi.github.io/next_js/)
 
 This is a web application that takes an employee's details, received through a form, on the
